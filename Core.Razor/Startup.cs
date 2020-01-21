@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,6 +26,7 @@ namespace Core.Razor
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddServerSideBlazor();//启用服务端blazor支持
 
             services.AddDbContext<CoreRaZorContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("CoreRaZorContext")));
@@ -55,6 +56,7 @@ namespace Core.Razor
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapBlazorHub();// js,singalr 
             });
         }
     }

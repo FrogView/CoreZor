@@ -1,0 +1,9 @@
+﻿<h3>CounterButton</h3>
+<button @onclick="Click"> Count:@Count </button>
+
+@code {
+    [Parameter]// 用于传递参数 
+    public int Count { get; set; } 
+
+    void Click() { Count++; }
+}
