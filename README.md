@@ -1,2 +1,2 @@
 # CoreZor
-.NetCore + Razor页面 + Blazor server 组件
+.NetCore + Razor + Blazor
