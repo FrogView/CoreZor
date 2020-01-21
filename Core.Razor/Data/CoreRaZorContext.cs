@@ -15,5 +15,6 @@ namespace Core.Razor.Data
         }
 
         public DbSet<Core.Razor.Models.Movie> Movie { get; set; }
+        public DbSet<Core.Razor.Models.Book> Book { get; set; }
     }
 }
